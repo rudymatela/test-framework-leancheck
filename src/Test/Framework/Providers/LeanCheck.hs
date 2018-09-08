@@ -9,14 +9,54 @@
 --
 -- Here's how your @test.hs@ might look like:
 --
--- > TODO: TBA
+-- > import Test.Framework
+-- > import Test.Framework.Providers.LeanCheck as LC
+-- > import Data.List
+-- >
+-- > main :: IO ()
+-- > main = defaultMain tests
+-- >
+-- > tests :: [Test]
+-- > tests =
+-- >   [ LC.testProperty "sort . sort == sort"
+-- >       $ \xs -> sort (sort xs :: [Int]) == sort xs
+-- >   , LC.testProperty "sort == id" -- not really, should fail
+-- >       $ \xs -> sort (xs :: [Int]) == xs
+-- >   ]
 --
 -- The output for the above program is:
 --
--- > TODO: TBA
+-- > ./eg/minimal
+-- > sort . sort == sort: [OK, passed 100 tests.]
+-- > sort == id: [Failed]
+-- > *** Failed! Falsifiable (after 7 tests):
+-- > [1,0]
+-- >
+-- >          Properties  Total
+-- >  Passed  1           1
+-- >  Failed  1           1
+-- >  Total   2           2
 --
--- Use @--...@ to configure the maximum number of tests for each property.
--- TODO: TBA
+-- Use @-a@ / @--maximum-generated-tests@ to configure the maximum number of
+-- tests for each property.
+--
+-- > $ ./eg/minimal -a5
+-- > sort . sort == sort: [OK, passed 5 tests.]
+-- > sort == id: [OK, passed 5 tests.]
+-- >
+-- >          Properties  Total      
+-- >  Passed  2           2          
+-- >  Failed  0           0          
+-- >  Total   2           2          
+--
+-- Since LeanCheck is enumerative,
+-- you may want to increate the default number of tests (100).
+-- Arbitrary rule of thumb:
+--
+-- * between 200 to 500 on a developer machine;
+-- * between 1000 and 5000 on the CI.
+--
+-- Your mileage may vary.
 --
 -- Please see the documentation of
 -- "Test.LeanCheck" and "Framework.Providers"
