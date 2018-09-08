@@ -52,6 +52,10 @@ sort == id: [Failed]
  Total   2           2
 ```
 
+
+Options
+-------
+
 Use @-a@ / @--maximum-generated-tests@ to configure the maximum number of tests
 for each property.
 
@@ -74,16 +78,6 @@ Arbitrary rule of thumb:
 * between 1000 and 5000 on the CI.
 
 Your mileage may vary.
-
-
-Options
--------
-
-To configure the number of tests ... TODO TBA.
-
-```
-TODO: TBA
-```
 
 
 Further reading
