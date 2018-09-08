@@ -56,8 +56,8 @@ sort == id: [Failed]
 Options
 -------
 
-Use @-a@ / @--maximum-generated-tests@ to configure the maximum number of tests
-for each property.
+Use `-a` or `--maximum-generated-tests` to configure
+the maximum number of tests for each property.
 
 ```
 $ ./eg/test -a5

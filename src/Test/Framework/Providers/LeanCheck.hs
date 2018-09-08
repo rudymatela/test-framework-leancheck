@@ -37,8 +37,8 @@
 -- >  Failed  1           1
 -- >  Total   2           2
 --
--- Use @-a@ / @--maximum-generated-tests@ to configure the maximum number of
--- tests for each property.
+-- Use @-a@ or @--maximum-generated-tests@ to configure
+-- the maximum number of tests for each property.
 --
 -- > $ ./eg/test -a5
 -- > sort . sort == sort: [OK, passed 5 tests.]
