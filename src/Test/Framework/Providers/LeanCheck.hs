@@ -37,7 +37,15 @@ newtype Results = Results [([String],Bool)]
 data Result = OK        Int
             | Falsified Int [String]
             | Exception Int [String] String
-  deriving (Eq, Show)
+  deriving Eq
+
+instance Show Result where
+  show (OK n)              =  "OK, passed " ++ show n ++ " tests."
+  show (Falsified i ce)    =  "*** Failed! Falsifiable (after "
+                           ++ show i ++ " tests):\n" ++ joinArgs ce
+  show (Exception i ce e)  =  "*** Failed! Exception '" ++ e
+                           ++ "' (after " ++ show i ++ " tests):\n"
+                           ++ joinArgs ce
 
 -- | Given a 'Testable' property, returns a test-framework test.
 --   For example, place the following in a 'TestGroup' list:
