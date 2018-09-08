@@ -49,4 +49,5 @@ instance Testlike Int Result Results where
   testTypeName _ = "Properties"
 
 instance TestResultlike Int Result where
-  testSucceeded = undefined
+  testSucceeded (OK _)  =  True
+  testSucceeded _       =  False
