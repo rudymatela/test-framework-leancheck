@@ -7,4 +7,14 @@ import Test.Framework.Providers.LeanCheck as LC
 import Data.List
 
 main :: IO ()
-main = undefined
+main = defaultMain tests
+
+tests :: [Test]
+tests =
+  [ LC.testProperty "sort . sort == sort"
+      $ \xs -> sort (sort xs :: [Int]) == sort xs
+  , LC.testProperty "sort == id" -- not really, should fail
+      $ \xs -> sort (xs :: [Int]) == xs
+  , LC.testProperty "head . sort == minimum h" -- not really, error
+      $ \xs -> head (sort xs :: [Int]) == minimum xs
+  ]
