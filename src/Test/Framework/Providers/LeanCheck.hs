@@ -59,7 +59,7 @@
 -- Your mileage may vary.
 --
 -- Please see the documentation of
--- "Test.LeanCheck" and "Framework.Providers"
+-- "Test.LeanCheck" and "Test.Framework.Providers"
 -- for more details.
 module Test.Framework.Providers.LeanCheck
   ( testProperty
