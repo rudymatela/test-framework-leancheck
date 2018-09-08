@@ -7,4 +7,12 @@ import Test.Framework.Providers.LeanCheck as LC
 import Data.List (sort)
 
 main :: IO ()
-main = undefined
+main = defaultMain tests
+
+tests :: [Test]
+tests =
+  [ testProperty "sort . sort == sort"
+      $ \xs -> sort (sort xs :: [Int]) == sort xs
+  , testProperty "x + x == 2 * x"
+      $ \x -> x + x == 2 * (x :: Int)
+  ]
