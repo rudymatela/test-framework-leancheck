@@ -1,3 +1,4 @@
+{-# LANGUAGE MultiParamTypeClasses #-}
 -- |
 -- Module      : Test.Framework.Providers.LeanCheck
 -- Copyright   : (c) 2018 Rudy Matela
@@ -26,6 +27,26 @@ module Test.Framework.Providers.LeanCheck
 where
 
 import Test.Framework.Providers.API
+import Test.LeanCheck
 
-testProperty :: a
-testProperty = undefined
+-- | List of test results for a given property
+newtype Results = Results [([String],Bool)]
+
+-- | The ultimate test result for a given property
+data Result = OK        Int
+            | Falsified Int [String]
+            | Exception Int [String] String
+  deriving (Eq, Show)
+
+testProperty :: Testable a => TestName -> a -> Test
+testProperty name = Test name . property
+
+property :: Testable a => a -> Results
+property = undefined
+
+instance Testlike Int Result Results where
+  runTest topts (Results rs) = undefined
+  testTypeName _ = "Properties"
+
+instance TestResultlike Int Result where
+  testSucceeded = undefined
