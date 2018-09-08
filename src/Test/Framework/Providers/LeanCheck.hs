@@ -26,7 +26,7 @@
 --
 -- The output for the above program is:
 --
--- > ./eg/minimal
+-- > ./eg/test
 -- > sort . sort == sort: [OK, passed 100 tests.]
 -- > sort == id: [Failed]
 -- > *** Failed! Falsifiable (after 7 tests):
@@ -40,7 +40,7 @@
 -- Use @-a@ / @--maximum-generated-tests@ to configure the maximum number of
 -- tests for each property.
 --
--- > $ ./eg/minimal -a5
+-- > $ ./eg/test -a5
 -- > sort . sort == sort: [OK, passed 5 tests.]
 -- > sort == id: [OK, passed 5 tests.]
 -- >
