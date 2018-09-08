@@ -39,6 +39,15 @@ data Result = OK        Int
             | Exception Int [String] String
   deriving (Eq, Show)
 
+-- | Given a 'Testable' property, returns a test-framework test.
+--   For example, place the following in a 'TestGroup' list:
+--
+-- > testProperty "sort . sort == sort" $
+-- >   \xs -> sort (sort xs :: [Int]) == sort xs
+--
+-- You may want to import this module qualified and use @LC.TestProperty@
+-- if mixing "Test.LeanCheck" tests
+-- with those of other property testing libraries.
 testProperty :: Testable a => TestName -> a -> Test
 testProperty name = Test name . Results . results
 
