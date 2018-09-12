@@ -71,7 +71,7 @@ sort == id: [OK, passed 5 tests.]
 ```
 
 Since LeanCheck is enumerative,
-you may want to increate the default number of tests (100).
+you may want to increase the default number of tests (100).
 Arbitrary rule of thumb:
 
 * between 200 to 500 on a developer machine;
