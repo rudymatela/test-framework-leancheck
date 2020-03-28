@@ -10,10 +10,7 @@ mk/All.o: \
 mk/Toplibs.o: \
   src/Test/Framework/Providers/LeanCheck.hs \
   mk/Toplibs.hs
-Setup.o: \
-  Setup.hs
-Setup: \
-  Setup.hs \
+src/Test/Framework/Providers/LeanCheck: \
   mk/toplibs
 src/Test/Framework/Providers/LeanCheck.o: \
   src/Test/Framework/Providers/LeanCheck.hs

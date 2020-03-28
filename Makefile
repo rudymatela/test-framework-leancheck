@@ -9,7 +9,7 @@ EGS = \
   eg/minimal
 BENCHS =
 GHCIMPORTDIRS = src
-GHCFLAGS = -O2 $(shell grep -q "Arch Linux" /etc/lsb-release && echo -dynamic)
+GHCFLAGS = -O2 $(shell grep -q "Arch Linux" /etc/lsb-release && echo -dynamic) -package test-framework
 HADDOCKFLAGS = --no-print-missing-docs \
   $(shell grep -q "Arch Linux" /etc/lsb-release && echo --optghc=-dynamic)
 
