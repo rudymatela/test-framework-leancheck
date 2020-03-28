@@ -14,9 +14,9 @@ src/Test/Framework/Providers/LeanCheck: \
   mk/toplibs
 src/Test/Framework/Providers/LeanCheck.o: \
   src/Test/Framework/Providers/LeanCheck.hs
-tests/test.o: \
-  tests/test.hs \
+test/test.o: \
+  test/test.hs \
   src/Test/Framework/Providers/LeanCheck.hs
-tests/test: \
-  tests/test.hs \
+test/test: \
+  test/test.hs \
   mk/toplibs
