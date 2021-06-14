@@ -1,6 +1,6 @@
 {-# LANGUAGE MultiParamTypeClasses, CPP #-}
 #if __GLASGOW_HASKELL__ == 708
-{-# DerivingDataTypeable, StandaloneDeriving #-}
+{-# LANGUAGE DeriveDataTypeable, StandaloneDeriving #-}
 #endif
 -- |
 -- Module      : Test.Framework.Providers.LeanCheck
@@ -72,6 +72,9 @@ where
 import Test.Framework.Providers.API
 import Test.LeanCheck
 import Control.Exception (SomeException, catch, evaluate)
+#if __GLASGOW_HASKELL__ == 708
+import Data.Typeable (Typeable)
+#endif
 
 -- | List of test results for a given property
 newtype Results = Results [([String],Bool)]
