@@ -100,8 +100,8 @@ Further reading
 [test-framework]: https://github.com/haskell/test-framework
 [LeanCheck]:      https://github.com/rudymatela/leancheck
 
-[build-status]: https://travis-ci.org/rudymatela/test-framework-leancheck.svg?branch=master
-[build-log]:    https://travis-ci.org/rudymatela/test-framework-leancheck
+[build-log]:     https://github.com/rudymatela/test-framework-leancheck/actions/workflows/build.yml
+[build-status]:  https://github.com/rudymatela/test-framework-leancheck/actions/workflows/build.yml/badge.svg
 [hackage-version]:                              https://img.shields.io/hackage/v/test-framework-leancheck.svg
 [test-framework-leancheck-on-hackage]:          https://hackage.haskell.org/package/test-framework-leancheck
 [stackage-lts-badge]:                           http://stackage.org/package/test-framework-leancheck/badge/lts
