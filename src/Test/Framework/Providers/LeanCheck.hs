@@ -1,4 +1,7 @@
-{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE MultiParamTypeClasses, CPP #-}
+#if __GLASGOW_HASKELL__ == 708
+{-# DerivingDataTypeable, StandaloneDeriving #-}
+#endif
 -- |
 -- Module      : Test.Framework.Providers.LeanCheck
 -- Copyright   : (c) 2018 Rudy Matela
@@ -72,6 +75,10 @@ import Control.Exception (SomeException, catch, evaluate)
 
 -- | List of test results for a given property
 newtype Results = Results [([String],Bool)]
+
+#if __GLASGOW_HASKELL__ == 708
+deriving instance Typeable Results
+#endif
 
 -- | The ultimate test result for a given property
 data Result = OK        Int
