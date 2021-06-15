@@ -1,6 +1,6 @@
 -- Cabal file for test-framework-leancheck
 name:                test-framework-leancheck
-version:             0.0.4
+version:             0.0.5
 synopsis:            LeanCheck support for test-framework.
 description:
   LeanCheck support for test-framework.
@@ -51,7 +51,7 @@ source-repository head
 source-repository this
   type:           git
   location:       https://github.com/rudymatela/test-framework-leancheck
-  tag:            v0.0.4
+  tag:            v0.0.5
 
 library
   exposed-modules:     Test.Framework.Providers.LeanCheck
