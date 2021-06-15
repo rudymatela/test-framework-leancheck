@@ -104,8 +104,8 @@ Further reading
 [build-status]:  https://github.com/rudymatela/test-framework-leancheck/actions/workflows/build.yml/badge.svg
 [hackage-version]:                              https://img.shields.io/hackage/v/test-framework-leancheck.svg
 [test-framework-leancheck-on-hackage]:          https://hackage.haskell.org/package/test-framework-leancheck
-[stackage-lts-badge]:                           http://stackage.org/package/test-framework-leancheck/badge/lts
-[stackage-nightly-badge]:                       http://stackage.org/package/test-framework-leancheck/badge/nightly
-[test-framework-leancheck-on-stackage]:         http://stackage.org/package/test-framework-leancheck
-[test-framework-leancheck-on-stackage-lts]:     http://stackage.org/lts/package/test-framework-leancheck
-[test-framework-leancheck-on-stackage-nightly]: http://stackage.org/nightly/package/test-framework-leancheck
+[stackage-lts-badge]:                           https://stackage.org/package/test-framework-leancheck/badge/lts
+[stackage-nightly-badge]:                       https://stackage.org/package/test-framework-leancheck/badge/nightly
+[test-framework-leancheck-on-stackage]:         https://stackage.org/package/test-framework-leancheck
+[test-framework-leancheck-on-stackage-lts]:     https://stackage.org/lts/package/test-framework-leancheck
+[test-framework-leancheck-on-stackage-nightly]: https://stackage.org/nightly/package/test-framework-leancheck
