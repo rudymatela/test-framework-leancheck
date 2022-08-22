@@ -9,9 +9,9 @@ EGS = \
   eg/minimal
 BENCHS =
 GHCIMPORTDIRS = src
-GHCFLAGS = -O2 $(shell grep -q "Arch Linux" /etc/lsb-release && echo -dynamic)
+GHCFLAGS = -O2 $(shell grep -q "Arch Linux" /etc/lsb-release && echo -dynamic -package test-framework)
 HADDOCKFLAGS = \
-  $(shell grep -q "Arch Linux" /etc/lsb-release && echo --optghc=-dynamic)
+  $(shell grep -q "Arch Linux" /etc/lsb-release && echo --optghc=-dynamic '--optghc="-package test-framework"')
 
 all: mk/toplibs
 
