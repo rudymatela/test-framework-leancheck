@@ -12,6 +12,7 @@ GHCIMPORTDIRS = src
 GHCFLAGS = -O2 $(shell grep -q "Arch Linux" /etc/lsb-release && echo -dynamic -package test-framework)
 HADDOCKFLAGS = \
   $(shell grep -q "Arch Linux" /etc/lsb-release && echo --optghc=-dynamic '--optghc="-package test-framework"')
+INSTALL_DEPS = test-framework leancheck
 
 all: mk/toplibs
 
