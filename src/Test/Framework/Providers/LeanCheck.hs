@@ -77,7 +77,7 @@ import Data.Typeable (Typeable)
 #endif
 
 -- | List of test results for a given property
-newtype Results = Results [([String],Bool)]
+newtype Results  =  Results [([String],Bool)]
 
 #if __GLASGOW_HASKELL__ == 708
 deriving instance Typeable Results
